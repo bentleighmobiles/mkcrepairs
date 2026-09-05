@@ -87,6 +87,8 @@ textarea{min-height:100px;resize:vertical}
 footer{background:var(--dark);color:#9ca3af;padding:40px 0;font-size:.9rem}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer .logo{color:#fff}
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:99;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 18px rgba(37,211,102,.45);transition:.2s}
+.wa-float:hover{transform:scale(1.1)}
 @media(max-width:860px){
   nav{display:none}
   .hero .wrap{grid-template-columns:1fr}
@@ -103,7 +105,7 @@ footer .logo{color:#fff}
 <div class="topbar">
   <div class="wrap">
     <span>🕐 Open 7 Days · Most screen repairs in 15–30 min</span>
-    <span>📞 <a href="tel:1300000000">1300 000 000</a></span>
+    <span>📞 <a href="tel:0485538922">0485 538 922</a></span>
   </div>
 </div>
 
@@ -127,8 +129,8 @@ footer .logo{color:#fff}
       <h1>Fast, reliable <span class="hl">phone &amp; computer</span> repairs.</h1>
       <p class="lead">iPhone, iPad, Samsung, MacBook and laptop repairs done by experienced technicians. Most screen fixes completed in 15–30 minutes while you wait.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-        <a href="tel:1300000000" class="btn btn-ghost">📞 Call Now</a>
+        <a href="https://wa.me/61485538922" class="btn btn-primary" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+        <a href="tel:0485538922" class="btn btn-ghost">📞 0485 538 922</a>
       </div>
       <div class="trust">
         <div>✓ <b>90-day</b> warranty</div>
@@ -195,13 +197,12 @@ footer .logo{color:#fff}
     <p class="sub">Free quotes, fast turnaround. Walk-ins welcome.</p>
     <div class="contact-grid">
       <div class="contact-info">
-        <div class="contact-item"><div class="icon">📞</div><div><b>Call us</b><span><a href="tel:1300000000">1300 000 000</a></span></div></div>
-        <div class="contact-item"><div class="icon">💬</div><div><b>Message</b><span>Reach us via WhatsApp for a quick quote</span></div></div>
-        <div class="contact-item"><div class="icon">✉️</div><div><b>Email</b><span><a href="mailto:hello@mkcrepairs.au">hello@mkcrepairs.au</a></span></div></div>
+        <div class="contact-item"><div class="icon">💬</div><div><b>WhatsApp</b><span><a href="https://wa.me/61485538922" target="_blank" rel="noopener">0485 538 922</a></span></div></div>
+        <div class="contact-item"><div class="icon">📞</div><div><b>Call us</b><span><a href="tel:0485538922">0485 538 922</a></span></div></div>
         <div class="contact-item"><div class="icon">📍</div><div><b>Visit</b><span>Melbourne CBD, VIC</span></div></div>
         <div class="contact-item"><div class="icon">🕐</div><div><b>Hours</b><span>Open 7 days · 9am–6pm</span></div></div>
       </div>
-      <form action="#" method="post">
+      <form id="contact-form" action="#" method="post">
         <div><label for="name">Name</label><input id="name" name="name" required></div>
         <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required></div>
         <div><label for="device">Device</label>
@@ -211,8 +212,19 @@ footer .logo{color:#fff}
           </select>
         </div>
         <div><label for="msg">What's the problem?</label><textarea id="msg" name="msg" required></textarea></div>
-        <button type="submit" class="btn btn-primary">Send Request</button>
+        <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
       </form>
+      <script>
+      document.getElementById('contact-form').addEventListener('submit', function(e){
+        e.preventDefault();
+        var name = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+        var device = document.getElementById('device').value;
+        var msg = document.getElementById('msg').value;
+        var text = 'Hi! I need a repair quote.%0AName: ' + encodeURIComponent(name) + '%0APhone: ' + encodeURIComponent(phone) + '%0ADevice: ' + encodeURIComponent(device) + '%0AIssue: ' + encodeURIComponent(msg);
+        window.open('https://wa.me/61485538922?text=' + text, '_blank');
+      });
+      </script>
     </div>
   </div>
 </section>
@@ -224,5 +236,6 @@ footer .logo{color:#fff}
     <div>Melbourne, VIC · mkcrepairs.au</div>
   </div>
 </footer>
+<a href="https://wa.me/61485538922" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 </body>
 </html>
