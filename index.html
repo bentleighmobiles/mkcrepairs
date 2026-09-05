@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MKC Repairs | Phone &amp; Computer Repairs Melbourne</title>
+<meta name="description" content="MKC Repairs — fast, reliable phone, iPad, MacBook and computer repairs in Melbourne. 30-minute screen repairs, 90-day warranty, 20+ years experience.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23dc2626'/><text x='50' y='68' font-size='42' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>MKC</text></svg>">
+<style>
+:root{
+  --red:#dc2626;
+  --red-dark:#b91c1c;
+  --ink:#111827;
+  --muted:#4b5563;
+  --bg:#f9fafb;
+  --card:#ffffff;
+  --line:#e5e7eb;
+  --dark:#111827;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.topbar{background:var(--dark);color:#fff;font-size:.82rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar span{display:flex;align-items:center;gap:6px}
+.topbar a:hover{color:#fca5a5}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
+.logo span{color:var(--red)}
+nav a{margin-left:26px;font-weight:500;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--red)}
+.cta{background:var(--red);color:#fff;padding:11px 22px;border-radius:10px;font-weight:700;font-size:.95rem;transition:.2s}
+.cta:hover{background:var(--red-dark);transform:translateY(-1px)}
+.hero{padding:80px 0 64px;background:linear-gradient(180deg,#fef2f2 0%,var(--bg) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fee2e2;color:var(--red-dark);padding:6px 14px;border-radius:999px;font-size:.82rem;font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.08;letter-spacing:-.03em;font-weight:900}
+h1 .hl{color:var(--red)}
+.lead{margin:18px 0 28px;font-size:1.12rem;color:var(--muted);max-width:520px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 28px;border-radius:12px;font-weight:700;font-size:1rem;transition:.2s}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 6px 20px rgba(220,38,38,.28)}
+.btn-primary:hover{background:var(--red-dark);transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--red);color:var(--red)}
+.trust{display:flex;gap:22px;margin-top:30px;flex-wrap:wrap}
+.trust div{font-size:.88rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+.trust b{color:var(--ink)}
+.hero-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 20px 50px rgba(17,24,39,.08)}
+.hero-card h3{font-size:1.15rem;margin-bottom:16px}
+.price-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.price-row:last-of-type{border-bottom:none}
+.price-row b{color:var(--red)}
+.note{margin-top:14px;font-size:.8rem;color:var(--muted)}
+section{padding:72px 0}
+h2{font-size:clamp(1.8rem,3.5vw,2.4rem);letter-spacing:-.02em;font-weight:800;margin-bottom:12px}
+.sub{color:var(--muted);max-width:640px;margin-bottom:40px}
+.grid{display:grid;gap:24px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(17,24,39,.08);border-color:#fecaca}
+.icon{width:48px;height:48px;border-radius:12px;background:#fee2e2;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px}
+.card h3{font-size:1.08rem;margin-bottom:8px}
+.card p{font-size:.92rem;color:var(--muted)}
+.alt{background:#fff}
+.dark-sec{background:var(--dark);color:#fff}
+.dark-sec h2{color:#fff}
+.dark-sec .sub{color:#9ca3af}
+.dark-sec .card{background:#1f2937;border:none}
+.dark-sec .card p{color:#d1d5db}
+.dark-sec .icon{background:var(--red);color:#fff}
+.bigprice{font-size:1.6rem;font-weight:900;color:var(--red)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.contact-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
+.contact-item .icon{margin:0;flex-shrink:0}
+.contact-item b{display:block;margin-bottom:2px}
+.contact-item span{color:var(--muted);font-size:.95rem}
+form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px}
+label{font-size:.88rem;font-weight:600}
+input,select,textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:1rem;font-family:inherit}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red)}
+textarea{min-height:100px;resize:vertical}
+footer{background:var(--dark);color:#9ca3af;padding:40px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer .logo{color:#fff}
+@media(max-width:860px){
+  nav{display:none}
+  .hero .wrap{grid-template-columns:1fr}
+  .grid-3,.grid-4{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .grid-3,.grid-4{grid-template-columns:1fr}
+  .hero{padding:56px 0 40px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <span>🕐 Open 7 Days · Most screen repairs in 15–30 min</span>
+    <span>📞 <a href="tel:1300000000">1300 000 000</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">MKC<span> Repairs</span></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="cta">Book a Repair</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="badge">🛠️ 20+ years experience · 90-day warranty</span>
+      <h1>Fast, reliable <span class="hl">phone &amp; computer</span> repairs.</h1>
+      <p class="lead">iPhone, iPad, Samsung, MacBook and laptop repairs done by experienced technicians. Most screen fixes completed in 15–30 minutes while you wait.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+        <a href="tel:1300000000" class="btn btn-ghost">📞 Call Now</a>
+      </div>
+      <div class="trust">
+        <div>✓ <b>90-day</b> warranty</div>
+        <div>✓ <b>30 min</b> screen repairs</div>
+        <div>✓ <b>Open 7 days</b></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Repair prices — from</h3>
+      <div class="price-row"><span>iPhone / iPad screen</span><b>from $49</b></div>
+      <div class="price-row"><span>MacBook screen</span><b>from $99</b></div>
+      <div class="price-row"><span>Battery replacement</span><b>from $49</b></div>
+      <div class="price-row"><span>Motherboard / logic board</span><b>from $129</b></div>
+      <div class="price-row"><span>Watch repair</span><b>from $79</b></div>
+      <p class="note">*Prices are starting points and vary by device. Free diagnosis before any work.</p>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Our repair services</h2>
+    <p class="sub">Phones, tablets, laptops and smartwatches — repaired in-store by professionals.</p>
+    <div class="grid grid-4">
+      <div class="card"><div class="icon">📱</div><h3>Screen Fixing</h3><p>iPhone, iPad, Samsung and laptop screens replaced in as little as 15 minutes.</p></div>
+      <div class="card"><div class="icon">🔋</div><h3>Battery Fixing</h3><p>Tablets, iPads, MacBooks and laptops — fresh genuine batteries fitted.</p></div>
+      <div class="card"><div class="icon">🔧</div><h3>Mobile Fixing</h3><p>Motherboard, camera, speaker, buttons and charging port repairs.</p></div>
+      <div class="card"><div class="icon">⌚</div><h3>Watch Fixing</h3><p>Apple and Samsung watch repairs — touch panels, speakers and mics.</p></div>
+      <div class="card"><div class="icon">💻</div><h3>MacBook &amp; Notebook</h3><p>Screen, keyboard, trackpad and logic board repairs for laptops.</p></div>
+      <div class="card"><div class="icon">🖥️</div><h3>Computer Repair</h3><p>Desktops, upgrades, virus removal and data recovery.</p></div>
+      <div class="card"><div class="icon">📷</div><h3>Camera &amp; Speaker</h3><p>Front/rear cameras, speakers and microphones repaired.</p></div>
+      <div class="card"><div class="icon">💾</div><h3>Data Recovery</h3><p>Recover photos, files and contacts from damaged devices.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="alt">
+  <div class="wrap">
+    <h2>Transparent pricing</h2>
+    <p class="sub">You'll always know the price before we begin. No hidden costs.</p>
+    <div class="grid grid-3">
+      <div class="card"><h3>iPhone &amp; iPad</h3><p>Screen from <span class="bigprice">$49</span></p><p>Accessories from $29. Up to 50% off.</p></div>
+      <div class="card"><h3>MacBook &amp; Notebook</h3><p>Screen from <span class="bigprice">$99</span></p><p>Keyboard, battery and logic board repairs.</p></div>
+      <div class="card"><h3>Samsung &amp; More</h3><p>Screen from <span class="bigprice">$69</span></p><p>Galaxy, Google Pixel, Oppo, Huawei and more.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="dark-sec">
+  <div class="wrap">
+    <h2>Why choose MKC Repairs?</h2>
+    <p class="sub">We've repaired devices for thousands of happy customers across Melbourne.</p>
+    <div class="grid grid-3">
+      <div class="card"><div class="icon">⚡</div><h3>15–30 Minute Repairs</h3><p>Most screen fixes are done while you wait — no need to leave your device overnight.</p></div>
+      <div class="card"><div class="icon">🛡️</div><h3>90-Day Warranty</h3><p>Every repair is covered for 90 days. If something's not right, bring it back.</p></div>
+      <div class="card"><div class="icon">🏆</div><h3>20+ Years Experience</h3><p>Our technicians have the skill and parts to fix nearly any device.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap">
+    <h2>Visit or get in touch</h2>
+    <p class="sub">Free quotes, fast turnaround. Walk-ins welcome.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item"><div class="icon">📞</div><div><b>Call us</b><span><a href="tel:1300000000">1300 000 000</a></span></div></div>
+        <div class="contact-item"><div class="icon">💬</div><div><b>Message</b><span>Reach us via WhatsApp for a quick quote</span></div></div>
+        <div class="contact-item"><div class="icon">✉️</div><div><b>Email</b><span><a href="mailto:hello@mkcrepairs.au">hello@mkcrepairs.au</a></span></div></div>
+        <div class="contact-item"><div class="icon">📍</div><div><b>Visit</b><span>Melbourne CBD, VIC</span></div></div>
+        <div class="contact-item"><div class="icon">🕐</div><div><b>Hours</b><span>Open 7 days · 9am–6pm</span></div></div>
+      </div>
+      <form action="#" method="post">
+        <div><label for="name">Name</label><input id="name" name="name" required></div>
+        <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required></div>
+        <div><label for="device">Device</label>
+          <select id="device" name="device">
+            <option>iPhone</option><option>iPad</option><option>Samsung</option>
+            <option>MacBook / Laptop</option><option>Watch</option><option>Other</option>
+          </select>
+        </div>
+        <div><label for="msg">What's the problem?</label><textarea id="msg" name="msg" required></textarea></div>
+        <button type="submit" class="btn btn-primary">Send Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">MKC<span> Repairs</span></div>
+    <div>© 2026 MKC Repairs. All rights reserved.</div>
+    <div>Melbourne, VIC · mkcrepairs.au</div>
+  </div>
+</footer>
+</body>
+</html>
